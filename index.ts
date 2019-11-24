@@ -12,6 +12,7 @@ interface Duck {
   walk : () => void;
   swim : () => void;
   quack : () => void;
+  newduck?: newBornDuck;
 }
 
 let probablyADuck = {
@@ -29,4 +30,47 @@ function FlyOverWater(bird: Duck) {
 FlyOverWater(probablyADuck);
 probablyADuck.walk();
 
-import { Book } from './interfaces';
+// -------------------------------------------------
+
+//Interfaces for Function Types
+function CreateCustomerID(name: string, id: number): string {
+  return name + id ;
+}
+
+interface StringGenerator {
+  (char: string, nums: number): string;
+}
+
+let IdGenerator: (char: string, nums: number) => string;
+//let IdGenerator : StringGenerator;
+IdGenerator = CreateCustomerID;
+
+//-------------------------------------------------------
+
+//2nd example, Interfaces for Function Types
+interface newBornDuck {
+  (date:string): void;
+}
+
+let newbornDay: newBornDuck;
+newbornDay = (day: string) => console.log('New Born Day is '+ day);
+newbornDay('Sunday');
+
+//-------------------------------------------------------------
+
+//Extending Interfaces
+
+interface Person {
+  name: string;
+  email: string;
+}
+
+interface Author extends Person {
+  numBookPublished: number;
+}
+
+interface Librarian extends Person {
+  department: string;
+  assistCustomer: (custName: string) => void;
+}
+

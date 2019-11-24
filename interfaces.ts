@@ -1,5 +1,3 @@
-import { Category } from './enum';
-
 interface Book {
   id: number;
   title: string;

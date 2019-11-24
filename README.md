@@ -25,3 +25,30 @@ interface Book {
   markDamaged : (reason: string) => void; 
 }
 
+
+----------------------------------------------------------------
+
+Modules :
+
+Changes in Typescript 1.5 :
+Begining with v1.5 
+"Internal modules" became "namespaces".
+"External modules" became "modules".
+
+Modules -
+Tool for organizing code
+Native support in Node.js to run Modules in typescript.
+Browser is supported with module loader.
+
+-------------------------------------------------------------------
+
+Namespaces - 
+Tool for organizing code
+Prevents global namespace pollution
+Best for smaller client applications
+
+Namespaces can be nested
+"Triple Slash" References
+///<refernce path = membership.ts />
+
+
