@@ -20,3 +20,6 @@ let probablyADuck = {
 
 function FlyOverWater(bird: Duck) { }
 FlyOverWater(probablyADuck);
+
+import { Category } from './enum';
+import { Book } from './interfaces';
