@@ -74,3 +74,13 @@ interface Librarian extends Person {
   assistCustomer: (custName: string) => void;
 }
 
+//--------------------------------------------------------------
+
+//Namespace Example
+/// <reference path="utilityFunction.ts" />
+import util = Utility.Fees;
+let fee = util.CalculateLateFee(10);
+console.log(fee);
+
+
+
