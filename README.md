@@ -51,4 +51,18 @@ Namespaces can be nested
 "Triple Slash" References
 ///<refernce path = membership.ts />
 
+------------------------------------------------------------------
+
+Supported Module format 
+In Node - CommonJS
+Browser apps - Asynchronous Module Defition(AMD)
+Universal Module Definition(UMD) - CommonJS + AMD
+Typescript has its own Module Format - ES2015
+
+-------------------------------------------------------------
+
+export { Book, myInterface as ourMagazine}
+import{ Magazine, GetMagazine as myGetMagazine } from './periodicals';
+import * as mag from './periodicals';
+
 
